@@ -171,6 +171,10 @@ __CNAME vs ALIAS__ —
 - For routing to S3 bucket // Elastic load balancer use A record with ALIAS.  
 - For routing to RDS instance use CNAME with NO ALIAS // without ALIAS.
 
+A - Routes taffic to IPV4 address and some aws servies
+AAA - Routes traffic to IPV6 address and some aws services
+CNAME - Routes traffic to anothr domain name nd some awws services
+
 ALIAS only supports the following services —
 - API Gateway
 - VPC interface endpoint
@@ -769,7 +773,7 @@ Every route table contains a __local route__ for communication within the VPC ov
 
 __VPC endpoints always take precedence__ over NAT Gateways or Internet Gateways. 
 
-Network ACL __rules are evaluated in order__, starting with the lowest numbered rule. As soon as a rule matches, it is applied regardless of any higher numbered rule that may contradict it.
+Network ACL __rules are evaluated in order__, starting with the lowest numbered rule. As soon as a rule matches, it is applied regardless of any higher numbered rule that may contradict it..
 
 SSH connections are between port 22 of the host and __an ephemeral port of the client__. In fact, this is true for any TCP service.
 
